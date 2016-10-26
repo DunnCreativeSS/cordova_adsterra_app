@@ -16,15 +16,15 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <platform name="android">
-	<preference name="BackgroundColor" value="0xffffffff"/>
+        <preference name="BackgroundColor" value="0xffffffff" />
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-	<access origin="https://api.adsterratools.com" subdomains="true" />
-
+    <access origin="https://api.adsterratools.com" subdomains="true" />
     <plugin name="cordova-plugin-localstorage-backup" spec="https://github.com/driftyco/cordova-plugin-localstorage-backup.git" />
     <plugin name="cordova-plugin-whitelist" spec="https://github.com/apache/cordova-plugin-whitelist" />
+    <plugin name="cordova-plugin-inappbrowser" spec="~1.5.0" />
 </widget>

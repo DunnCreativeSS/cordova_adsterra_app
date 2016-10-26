@@ -335,7 +335,7 @@ var myChart26 = new Chart(ctx26,
 });
 			}});
 			}});
-			$('#profile').html('Adsterra Access Key: <input type="text" id="access_key" value="' + localStorage.getItem("access_key3") + '"></input><input type="submit" onclick="that.onsubmit();">');
+			$('#profile').html('<a style="color:blue;" onclick="window.open(\'https://publishers.adsterra.com/api-token/\', \'_system\');">Adsterra Publisher Access Key:</a><br><br> <input type="text" id="access_key" value="' + localStorage.getItem("access_key3") + '"></input><input type="submit" onclick="that.onsubmit();">');
 		setTimeout(doData, 60000);
 	}
 var that = this;
@@ -385,14 +385,14 @@ var app = {
 		if (localStorage.getItem("access_key3") == null){
 			activate_subpage("#uib_page_5");
 			$('.uib_w_4').css('background', '#00AEEF');
-			$('#profile').html('Adsterra Access Key: <input type="text" id="access_key"></input><input type="submit" id="thesubmit">');
+			$('#profile').html('<a style="color:blue;" onclick="window.open(\'https://publishers.adsterra.com/api-token/\', \'_system\');">Adsterra Publisher Access Key:</a><br><br> <input type="text" id="access_key"></input><input type="submit" id="thesubmit">');
 			  document.getElementById("thesubmit").addEventListener("click", that.onsubmit, false);
 		}
 		else {
 			
 			activate_subpage("#uib_page_5");
 			$('.uib_w_4').css('background', '#00AEEF');
-				$('#profile').html('Adsterra Access Key: <input type="text" id="access_key" value="' +  localStorage.getItem("access_key3") + '"></input><input type="submit" id="thesubmit">');
+				$('#profile').html('<a style="color:blue;" onclick="window.open(\'https://publishers.adsterra.com/api-token/\', \'_system\');">Adsterra Publisher Access Key:</a><br><br> <input type="text" id="access_key" value="' +  localStorage.getItem("access_key3") + '"></input><input type="submit" id="thesubmit">');
 		document.getElementById("thesubmit").addEventListener("click", that.onsubmit, false);
 			that.doDomain();
 			}

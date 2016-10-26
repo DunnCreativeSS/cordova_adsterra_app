@@ -12,6 +12,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.dcss.adsterra"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.dcss.adsterra"
         }
     },
     "dependent_plugins": {}
