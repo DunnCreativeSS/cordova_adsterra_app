@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Copyright © 2012-2015, Intel Corporation. All rights reserved.
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/af.ui.min.css">
+        <link rel="stylesheet" type="text/css" href="app_framework/2.1/css/icons.min.css">
+        <title>Adsterra App</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' https://api.adsterratools.com data: application:; script-src 'self' 'unsafe-inline' 'nonce-R4nd0m' 'nonce-lala'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data:">
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+<script nonce="lala" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <!--            
+            You may substitute jQuery for the App Framework selector library.
+            See http://app-framework-software.intel.com/documentation.php#afui/afui_jquery
+        -->
+        <script type="application/javascript" src="app_framework/2.1/appframework.js"></script>
+        <script type="application/javascript" src="app_framework/2.1/appframework.ui.js" data-ver="1"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/af_subpage.js"></script>
+    </head>
+
+    <body id="afui">
+<script nonce="R4nd0m" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.js"></script>
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <header class="wrapping-col wrap-element uib_w_1" data-uib="app_framework/header" data-ver="2" id="af-header-0">
+            <h1>Adsterra App</h1>
+        </header>
+        <div id="content" class="uwrap">
+            <div class="upage panel" id="mainpage" data-header="af-header-0" data-footer="af-footer-0">
+                <div class="upage-content content-area vertical-col" id="uib_page_2">
+                    <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <div class="widget uib_w_5 d-margins" data-uib="media/text" data-ver="0">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div style="width:100%;"><canvas id="chart1"></canvas></div>
+                                    <div style="width:100%;"><canvas id="chart1-2"></canvas></div>
+                                    <div style="width:100%;"><canvas id="chart1-3"></canvas></div>
+                                    <div style="width:100%;"><canvas id="chart1-4"></canvas></div>
+                                    <div style="width:100%;"><canvas id="chart1-5"></canvas></div>
+                                    <div style="width:100%;"><canvas id="chart1-6"></canvas></div>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+
+                <div id="uib_page_3" class="upage-content vertical-col hidden">
+
+                    <div class="grid grid-pad urow uib_row_2 row-height-2" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_2 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <div class="widget uib_w_8 d-margins" data-uib="media/text" data-ver="0">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div style="width:100%;"><canvas id="chart2"></canvas></div>
+                                    <div style="width:100%;"><canvas id="chart2-2"></canvas></div>
+                                    <div style="width:100%;"><canvas id="chart2-3"></canvas></div>
+                                    <div style="width:100%;"><canvas id="chart2-4"></canvas></div>
+                                    <div style="width:100%;"><canvas id="chart2-5"></canvas></div>
+                                    <div style="width:100%;"><canvas id="chart2-6"></canvas></div>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+                <div id="uib_page_4" class="upage-content vertical-col hidden">
+                    <div class="grid grid-pad urow uib_row_3 row-height-3" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_3 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <div class="widget uib_w_9 d-margins" data-uib="media/text" data-ver="0">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div>
+                                        <h1>Today</h1>
+										<div id = 'today'></div>
+                                    </div>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+                <div id="uib_page_5" class="upage-content vertical-col hidden">
+                    <div class="grid grid-pad urow uib_row_4 row-height-4" data-uib="layout/row" data-ver="0">
+                        <div class="col uib_col_4 col-0_12-12" data-uib="layout/col" data-ver="0">
+                            <div class="widget-container content-area vertical-col">
+
+                                <div class="widget uib_w_10 d-margins" data-uib="media/text" data-ver="0">
+                                    <div class="widget-container left-receptacle"></div>
+                                    <div class="widget-container right-receptacle"></div>
+                                    <div>
+                                        <div id = "profile"></div>
+										
+                                    <div id="domains"></div>
+                                    </div>
+									<div id="results"></div>
+                                </div><span class="uib_shim"></span>
+                            </div>
+                        </div>
+                        <span class="uib_shim"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer class="wrap-element uib_w_2" data-uib="app_framework/footer" data-ver="1" id="af-footer-0">
+
+            <a class="widget uib_w_7 d-margins icon home" data-uib="app_framework/button" data-ver="1">7 Days</a><a class="widget uib_w_6 d-margins icon home" data-uib="app_framework/button" data-ver="1">30 Days</a><a class="widget uib_w_3 d-margins icon home"
+            data-uib="app_framework/button" data-ver="1">Today</a><a class="widget uib_w_4 d-margins icon user" data-uib="app_framework/button" data-ver="1">Settings</a>
+
+        </footer>
+    </body>
+
+</html>

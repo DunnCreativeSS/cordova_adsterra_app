@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.dcss.adsterra" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>AdsterraApp</name>
+    <description>
+        Adsterra Publishers Graphs and 60-Second Updates
+    </description>
+    <author email="adsterra@fullstory.co" href="http://fullstory.co">
+        Dunn Creative Systems and Solutions Ltd.
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+	<preference name="BackgroundColor" value="0xffffffff"/>
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+	<access origin="https://api.adsterratools.com" subdomains="true" />
+
+    <plugin name="cordova-plugin-localstorage-backup" spec="https://github.com/driftyco/cordova-plugin-localstorage-backup.git" />
+    <plugin name="cordova-plugin-whitelist" spec="https://github.com/apache/cordova-plugin-whitelist" />
+</widget>

@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.dcss.adsterra" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="LocalStorageBackup">
+        <param name="android-package" value="io.ionic.localstoragebackup.LocalStorageBackup" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>AdsterraApp</name>
+    <description>
+        Adsterra Publishers Graphs and 60-Second Updates
+    </description>
+    <author email="adsterra@fullstory.co" href="http://fullstory.co">
+        Dunn Creative Systems and Solutions Ltd.
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <access origin="https://api.adsterratools.com" subdomains="true" />
+    <allow-intent href="market:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="BackgroundColor" value="0xffffffff" />
+</widget>

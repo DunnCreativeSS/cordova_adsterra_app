@@ -1,0 +1,32 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.dcss.adsterra"
+        },
+        "cordova-plugin-localstorage-backup": {
+            "PACKAGE_NAME": "com.dcss.adsterra"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-localstorage-backup/www/LocalStorageBackup.js",
+            "id": "cordova-plugin-localstorage-backup.LocalStorageBackup",
+            "pluginId": "cordova-plugin-localstorage-backup",
+            "clobbers": [
+                "LocalStorageBackup"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.3.0",
+        "cordova-plugin-localstorage-backup": "0.0.1"
+    }
+}
